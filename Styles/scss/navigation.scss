@@ -1,0 +1,85 @@
+#nav {
+	margin-bottom: 10px;
+}
+
+// Simple Nav bar
+.simple-nav {
+	width: 100%;
+	margin: 10px auto; 
+	color: $primary-font;
+	font-size: 18px;
+	text-align: center;
+
+	.nav-list {	
+		li { 
+			display: inline-block;
+			margin: 5px;
+			padding-bottom: 3px;
+			font-size: 18px;			
+		}
+
+		li.active > a {
+			border-bottom: 3px solid $secondary-theme !important;
+			color: $primary-font !important;
+		}
+		
+		li > a {
+			//display: block;
+			padding: 6px 12px;
+			color: $primary-font;
+		}
+
+		li > a:hover, li > a:focus {
+			border-bottom: 3px solid lighten($primary-font, 10%);
+			color: lighten($primary-font, 10%);
+		}
+	}
+}
+
+
+/* nav bar */
+// .navbar-header {
+// 	padding: 0 5px; 		
+// }
+
+// .navbar-collapse {
+//   	 background: $primary-theme;  
+//   	 float: right;	 
+// }
+
+// .navbar-default {
+// 	background: $primary-theme;
+// 	border-bottom: 1px solid #e7e7e7; 
+// 	font-size: 18px;
+	
+// 	.navbar-nav {
+// 		width: 100%;
+// 		float: right;
+	
+// 		&.navbar-nav > li > a {
+// 			color: $primary-font;						
+// 		}					
+// 	}
+	
+// 	.navbar-toggle {
+// 		border: none;	
+// 		background: $primary-theme; 
+		
+// 		.icon-bar {
+// 				background: $primary-font;
+// 			}	
+// 	}
+	
+// 	.navbar-toggle:focus, .navbar-toggle:hover {
+// 			border: none;
+// 			background: $primary-theme;
+// 			color: $secondary-theme; 	
+			
+// 			.icon-bar {
+// 				background: $secondary-theme;
+// 			}					
+// 		} 
+				
+// }
+
+
