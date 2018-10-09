@@ -10,11 +10,10 @@ html, body {
   font-size: 18px;
   font-family: "Open Sans", Helvetica, sans-serif; }
 
-a {
-  text-decoration: none !important; }
-
-a:hover, a:focus {
-  color: #008fd6; }
+a, a:link, a:visited {
+  text-decoration: none !important;
+  color: inherit;
+}
 
 b {
   color: #006da3; }
@@ -97,7 +96,8 @@ ul {
   padding: 50px 0px; }
 
 .title {
-  text-align: center; }
+  text-align: center; 
+}
 
 .page-height {
   min-height: 90vh; }
