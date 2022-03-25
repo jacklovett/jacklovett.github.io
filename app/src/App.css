@@ -1,0 +1,78 @@
+.App {
+  background-color: #000000;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: #ffffff;
+}
+
+.app-content {
+  position: relative;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 789px) {
+  nav {
+    justify-content: flex-end;
+  }
+}
+
+.nav-link {
+  padding: 16px;
+}
+
+
+.footer {
+  background: #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  text-align: center;
+  line-height: 15px; }
+
+  .footer .social-networks {
+    font-size: 36px;
+    padding: 10px; }
+
+  .footer a:hover, .footer a:focus {
+    color: #008fd6; }
+
+  .footer .icons {
+    padding: 5px 10px;
+    color: #006da3; }
+    .footer .icons.contact {
+      font-size: 18px; }
+  .footer b {
+    color: #006da3; }
+
+    .footer .contact-details {
+      /* background-color: red; */
+    }
