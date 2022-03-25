@@ -1,22 +1,13 @@
 import React from "react";
+import { IconLink } from "./IconLink"
 
 export const Footer = () => (
   <section className="footer column">
-    {/* <h3>
-      <a aria-label="contact"></a>Contact
-    </h3> */}
     <div className="column">
     <div className="social-networks">
-      {/* Split icons buttons into reusable component */}
-      <a className="icons" href="https://github.com/jacklovett" target="_blank" rel="noreferrer">
-        <i className="fa fa-github"></i>
-      </a>
-      <a className="icons" href="https://www.linkedin.com/in/jack-lovett" target="_blank" rel="noreferrer">
-        <i className="fa fa-linkedin-square"></i>
-      </a>
-      <a className="icons" href="https://twitter.com/lovettech" target="_blank" rel="noreferrer" >
-        <i className="fa fa-twitter"></i>
-      </a>
+      <IconLink  icon="github" link="https://github.com/jacklovett"/>
+      <IconLink  icon="linkedin-square" link="https://www.linkedin.com/in/jack-lovett"/>
+      <IconLink  icon="twitter" link="https://twitter.com/lovettech"/>
     </div>
     <div>
       <ul className="contact-details">
