@@ -1,0 +1,163 @@
+.app {
+    background-color: var(--black);
+    min-height: 100vh;
+    height: 100%;
+    font-size: calc(10px + 2vmin);
+    color: var(--white);
+}
+
+.app-content {
+    text-align: center;
+    height: calc(100% - var(--header-height));
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about-content {
+    max-width: 300px;
+}
+
+@media (min-width: 483px) {
+    .about-content {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 789px) {
+    .about-content {
+        max-width: 600px;
+    }
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--header-height);
+    background: var(--surface-color);
+}
+
+@media (min-width: 789px) {
+    nav {
+        justify-content: flex-end;
+    }
+}
+
+.nav-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.nav-item.selected {
+    border-bottom: solid 4px var(--primary-color);
+}
+
+/* Icons */
+.icons {
+    padding: 8px 16px;
+    color: var(--primary-color);
+}
+
+.icons:hover i,
+.icons:focus i {
+    color: var(--white);
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.contact .social-networks {
+    font-size: 48px;
+    padding: 8px 16px;
+}
+
+.contact .icons.contacts {
+    font-size: 18px;
+}
+
+.contact b {
+    color: var(--white);
+}
+
+/* Projects Section */
+.projects-view {
+    background-color: var(--white);
+    height: 100%;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.projects {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 16px;
+    overflow-y: auto;
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.project-status {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.project-details {
+    background-color: var(--surface-color);
+    width: 300px;
+    height: fit-content;
+    max-height: 320px;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+.repo-container {
+    padding-top: 8px;
+}
+
+.repo {
+    margin: auto;
+    padding: 32px 16px;
+    font-size: 16px;
+    color: var(--black);
+}
+
+.repo > a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
