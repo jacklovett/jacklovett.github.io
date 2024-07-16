@@ -4,7 +4,7 @@ export const Home = () => {
     return (
         <div className="about-container">
             <div className="about-content">
-                <h1>Jack Lovett</h1>
+                {/* <h1>Jack Lovett</h1> */}
                 <p>
                     Hi! I'm an experienced developer who's worked with a variety
                     of tech stacks, mostly focusing on web development. I am
