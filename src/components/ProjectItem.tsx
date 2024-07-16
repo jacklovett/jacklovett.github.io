@@ -8,7 +8,7 @@ interface Props {
 
 export const ProjectItem = (props: Props) => {
     const { project } = props
-    const { name, description, link, status, imagePath } = project
+    const { name, description, link, status } = project
     return (
         <div className="project-details">
             {/* <img src={imagePath} alt={name} /> */}
