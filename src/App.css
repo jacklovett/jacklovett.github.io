@@ -1,5 +1,5 @@
 .app {
-    background-color: var(--black);
+    background-color: red;
     min-height: 100vh;
     height: 100%;
     font-size: calc(10px + 2vmin);
