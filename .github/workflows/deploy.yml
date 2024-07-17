@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
     push:
         branches:
-            - master # Trigger the workflow on push to the main branch
+            - master
 
 jobs:
     build-and-deploy:
@@ -16,17 +16,13 @@ jobs:
             - name: Set up Node.js
               uses: actions/setup-node@v2
               with:
-                  node-version: "16" # Specify the Node.js version
+                  node-version: "16"
 
             - name: Install dependencies
-              run: yarn install # Use 'npm install' if your project uses npm
+              run: yarn install
 
             - name: Build the project
-              run: yarn build # Use 'npm run build' if your project uses npm
+              run: yarn build
 
             - name: Deploy to GitHub Pages
-              uses: JamesIves/github-pages-deploy-action@v4
-              with:
-                  branch: gh-pages # The branch to deploy to
-                  folder: build # The folder where the build output is located
-                  clean: true
+              run: yarn deploy
