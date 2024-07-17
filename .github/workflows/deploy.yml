@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
     push:
         branches:
-            - master
+            - master # or your default branch
 
 jobs:
     build-and-deploy:
@@ -19,10 +19,10 @@ jobs:
                   node-version: "16"
 
             - name: Install dependencies
-              run: yarn install
+              run: yarn install # or npm install
 
             - name: Build the project
-              run: yarn build
+              run: yarn build # or npm run build
 
             - name: Configure Git
               run: |
@@ -30,6 +30,6 @@ jobs:
                   git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
             - name: Deploy to GitHub Pages
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: yarn deploy
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
