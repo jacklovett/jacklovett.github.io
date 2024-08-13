@@ -47,6 +47,7 @@ export const Projects = () => {
                         loop
                         autoPlay
                         muted
+                        preload="auto"
                     ></video>
                 </div>
                 <div className="center content">
