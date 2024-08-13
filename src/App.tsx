@@ -9,7 +9,7 @@ import "./App.css"
 
 const App = () => (
     <div className="app">
-        <Router>
+        <Router basename="/jacklovett.github.io/">
             <Navigation />
             <div className="app-content">
                 <Routes>
