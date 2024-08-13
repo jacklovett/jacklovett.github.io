@@ -19,6 +19,7 @@ export const Navigation = (): JSX.Element => {
 
     // If the `from404` query parameter is present, redirect to the custom 404 page
     if (queryParams.from404) {
+        console.log("Reaching redirect")
         navigate("/404")
     }
 
