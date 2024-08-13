@@ -17,11 +17,12 @@ export const Navigation = (): JSX.Element => {
 
     const queryParams = queryString.parse(search)
 
-    // If the `from404` query parameter is present, redirect to the custom 404 page
-    if (queryParams.from404) {
-        console.log("Reaching redirect")
-        navigate("/404")
-    }
+    // If the `from404` query parameter is present, navigate to the custom 404 page
+    React.useEffect(() => {
+        if (queryParams.from404) {
+            navigate("/404", { replace: true })
+        }
+    }, [queryParams.from404, navigate])
 
     return (
         <nav className="center">
