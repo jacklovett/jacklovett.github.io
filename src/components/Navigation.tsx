@@ -12,8 +12,7 @@ const navigationGroup = [
 
 export const Navigation = (): JSX.Element => {
     const navigate = useNavigate()
-    const location = useLocation()
-    const { pathname, search } = location
+    const { pathname, search } = useLocation()
 
     const queryParams = queryString.parse(search)
 

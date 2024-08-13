@@ -1,10 +1,10 @@
 import React from "react"
-import "./index.css"
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom"
 
 import { Navigation } from "./components"
 import { Home, Projects, Contact, PageNotFound } from "./views"
 
+import "./index.css"
 import "./App.css"
 
 const App = () => (
