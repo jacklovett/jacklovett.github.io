@@ -81,7 +81,7 @@ export const Projects = () => {
                             ariaLabel="Visit 1More"
                         >
                             <img
-                                src="/img/1More/1More-Logo.png"
+                                src="/img/1More/1more-logo.png"
                                 alt="1More"
                                 height="64"
                             />
