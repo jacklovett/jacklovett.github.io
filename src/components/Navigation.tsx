@@ -1,5 +1,6 @@
 import React from "react"
-import { useLocation } from "react-router-dom"
+import { useNavigate, useLocation } from "react-router-dom"
+import queryString from "query-string"
 
 import NavigationItem from "./NavigationItem"
 
@@ -9,9 +10,17 @@ const navigationGroup = [
     { path: "/contact", name: "Contact" },
 ]
 
-export const Navigation = () => {
+export const Navigation = (): JSX.Element => {
+    const navigate = useNavigate()
     const location = useLocation()
-    const currentPath = location.pathname
+    const { pathname, search } = location
+
+    const queryParams = queryString.parse(search)
+
+    // If the `from404` query parameter is present, redirect to the custom 404 page
+    if (queryParams.from404) {
+        navigate("/404")
+    }
 
     return (
         <nav className="center">
@@ -22,7 +31,7 @@ export const Navigation = () => {
                         key={name}
                         path={path}
                         name={name}
-                        isSelected={currentPath === path}
+                        isSelected={pathname === path}
                         onClick={() => {}}
                     />
                 )
