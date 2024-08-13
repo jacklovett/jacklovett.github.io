@@ -1,5 +1,11 @@
-import React from "react";
+import React from "react"
+import { RetroComputer } from "../components"
 
-export const PageNotFound = () => {
-  return <h3>404: Page not found</h3>;
-};
+export const PageNotFound = () => (
+    <div className="about-container center">
+        <div>
+            <RetroComputer notFoundPage />
+            <h2>404: Page not found</h2>
+        </div>
+    </div>
+)

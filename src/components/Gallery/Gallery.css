@@ -1,0 +1,116 @@
+.gallery-container {
+    position: relative;
+}
+
+.gallery {
+    cursor: pointer;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery.opened img {
+    display: none;
+}
+
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.gallery-overlay .gallery-image {
+    max-width: 86%;
+    transition: transform 0.5s ease;
+}
+
+.gallery-button {
+    color: var(--white);
+    background: transparent;
+    opacity: 0.8;
+    font-size: 24px;
+    border: none;
+    width: 16px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.gallery-button:hover {
+    opacity: 1;
+}
+
+.gallery-button:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+.close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.prev-button {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.next-button {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+    .gallery-button {
+        font-size: 32px;
+    }
+
+    .close-button {
+        top: 32px;
+        right: 32px;
+    }
+
+    .next-button {
+        right: 32px;
+    }
+
+    .prev-button {
+        left: 32px;
+    }
+}
+
+.image-indicators {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    gap: 5px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--white);
+    opacity: 0.2;
+}
+
+.indicator.active {
+    opacity: 1;
+}

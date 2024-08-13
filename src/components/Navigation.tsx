@@ -1,26 +1,20 @@
-import React, { useState } from "react"
+import React from "react"
+import { useLocation } from "react-router-dom"
+
 import NavigationItem from "./NavigationItem"
 
 const navigationGroup = [
-    {
-        path: "/",
-        name: "About",
-    },
-    {
-        path: "/projects",
-        name: "Projects",
-    },
-    {
-        path: "/contact",
-        name: "Contact",
-    },
+    { path: "/", name: "About" },
+    { path: "/projects", name: "Projects" },
+    { path: "/contact", name: "Contact" },
 ]
 
 export const Navigation = () => {
-    const [selected, setSelected] = useState<string>(navigationGroup[0].name)
+    const location = useLocation()
+    const currentPath = location.pathname
 
     return (
-        <nav>
+        <nav className="center">
             {navigationGroup.map((navItem) => {
                 const { name, path } = navItem
                 return (
@@ -28,8 +22,8 @@ export const Navigation = () => {
                         key={name}
                         path={path}
                         name={name}
-                        isSelected={selected === name}
-                        onClick={() => setSelected(name)}
+                        isSelected={currentPath === path}
+                        onClick={() => {}}
                     />
                 )
             })}
