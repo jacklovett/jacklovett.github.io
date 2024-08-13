@@ -1,6 +1,16 @@
+/* Utility Class */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Base Styles */
+
 .app {
     background-color: var(--black);
-    min-height: 100vh;
     height: 100%;
     font-size: calc(10px + 2vmin);
     color: var(--white);
@@ -11,51 +21,68 @@
     height: calc(100% - var(--header-height));
 }
 
+.highlight {
+    /* font-size: 1.6rem; */
+    color: var(--primary-color);
+    margin-top: -16px;
+
+    .divider {
+        color: var(--white);
+    }
+}
+
+.cta {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.cta a {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta a:hover {
+    opacity: 0.5;
+}
+
 /* About Section */
+
 .about-container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
 }
 
 .about-content {
-    max-width: 300px;
+    max-width: 320px;
 }
 
-@media (min-width: 483px) {
+@media (min-width: 430px) {
     .about-content {
-        max-width: 400px;
+        max-width: 430px;
     }
 }
 
 @media (min-width: 789px) {
     .about-content {
-        max-width: 600px;
+        max-width: 686px;
     }
-}
 
-/* Navigation */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: var(--header-height);
-    background: var(--surface-color);
-}
-
-@media (min-width: 789px) {
-    nav {
+    nav.center {
         justify-content: flex-end;
     }
 }
 
+/* Navigation */
+
+nav {
+    height: var(--header-height);
+    background: var(--surface-color);
+}
+
 .nav-item {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 16px;
 }
 
@@ -64,6 +91,7 @@ nav {
 }
 
 /* Icons */
+
 .icons {
     padding: 8px 16px;
     color: var(--primary-color);
@@ -75,21 +103,18 @@ nav {
 }
 
 /* Contact Section */
+
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     height: 100%;
 }
 
 .contact .social-networks {
     font-size: 48px;
-    padding: 8px 16px;
+    padding: 0 16px;
 }
 
 .contact .icons.contacts {
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .contact b {
@@ -97,27 +122,101 @@ nav {
 }
 
 /* Projects Section */
+
 .projects-view {
     background-color: var(--white);
     height: 100%;
+
+    a {
+        color: var(--primary-color);
+        text-decoration: underline;
+    }
 }
 
-.projects-container {
-    display: flex;
+.project-content {
+    padding: 48px 32px;
     flex-direction: column;
-    padding-top: 60px;
 }
 
-.projects {
+.content {
+    flex-direction: column;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.video-container {
     display: flex;
-    flex: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    position: relative;
     width: 100%;
-    max-width: 100%;
-    gap: 16px;
-    overflow-y: auto;
+    max-width: 960px;
+    max-height: 540px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 16px 0;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.soundid {
+    color: var(--black);
+}
+
+.corsair,
+.samaritans {
+    color: var(--white);
+    background: var(--black);
+    flex-direction: column-reverse;
+}
+
+.onemore,
+.tic-stat-toe {
+    color: var(--black);
+    flex-direction: row;
+}
+
+@media (min-width: 1048px) {
+    .corsair {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 768px) {
+    .samaritans {
+        flex-direction: row;
+    }
+
+    .content {
+        padding: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .onemore,
+    .tic-stat-toe {
+        flex-direction: column;
+    }
+}
+
+.samaritans {
+    background: var(--samaritans-background);
+    color: var(--samaritans-color);
+
+    h2 {
+        color: var(--samaritans-color);
+    }
+}
+
+.tic-stat-toe {
+    background: var(--tic-stat-toe-background);
+    color: var(--tic-stat-toe-color);
+
+    h2 {
+        color: var(--tic-stat-toe-color);
+    }
 }
 
 .project-title {
@@ -129,35 +228,17 @@ nav {
 .project-description {
     font-size: 16px;
     line-height: 20px;
+    max-width: 640px;
 }
 
-.project-status {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.project-details {
-    background-color: var(--surface-color);
-    width: 300px;
-    height: fit-content;
-    max-height: 320px;
-    padding: 16px;
-    border-radius: 5px;
-}
-
-.repo-container {
-    padding-top: 8px;
+.project-logo {
+    padding-bottom: 8px;
 }
 
 .repo {
+    max-width: 340px;
     margin: auto;
     padding: 32px 16px;
     font-size: 16px;
     color: var(--black);
-}
-
-.repo > a {
-    color: var(--primary-color);
-    text-decoration: underline;
 }

@@ -12,7 +12,11 @@ const NavigationItem = (props: Props) => {
     const { path, name, isSelected, onClick } = props
 
     return (
-        <div className={isSelected ? "nav-item selected" : "nav-item"}>
+        <div
+            className={
+                isSelected ? "center nav-item selected" : "center nav-item"
+            }
+        >
             <NavLink to={path} onClick={onClick}>
                 {name}
             </NavLink>

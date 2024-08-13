@@ -1,21 +1,25 @@
 import React from "react"
+import { Link as ReactLink } from "react-router-dom"
+import { RetroComputer } from "../components"
 
 export const Home = () => {
     return (
-        <div className="about-container">
+        <div className="about-container center">
             <div className="about-content">
+                <RetroComputer />
                 <h1>Jack Lovett</h1>
-                <p>
-                    Hi! I'm an experienced developer who's worked with a variety
-                    of tech stacks, mostly focusing on web development. I am
-                    passionate about creating intuitive and engaging UI/UX
-                    designs that enhance user experiences and make people's
-                    lives easier and more enjoyable.
+                <p className="highlight">
+                    Full-stack Developer <span className="divider">|</span> UX
+                    Enthusiast
                 </p>
                 <p>
-                    I'm looking for new opportunities to work on innovative
-                    projects with a great team. If you're interested in
-                    collaborating, let's get in touch!
+                    I’m passionate about creating intuitive and engaging digital
+                    experiences across all platforms. Let's create user-focused
+                    solutions that make a difference
+                </p>
+                <p className="cta">
+                    Interested?{" "}
+                    <ReactLink to="/contact">Let's connect!</ReactLink>
                 </p>
             </div>
         </div>
