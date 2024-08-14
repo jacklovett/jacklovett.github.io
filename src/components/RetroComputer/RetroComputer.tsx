@@ -2,12 +2,12 @@ import React from "react"
 import "./RetroComputer.css"
 
 interface IProps {
+    animationText: string
     color?: string
-    notFoundPage?: boolean
 }
 
 export const RetroComputer = (props: IProps) => {
-    const { color = "#ffffff", notFoundPage } = props
+    const { animationText, color = "#ffffff" } = props
     return (
         <div className="retro-computer-container">
             <div className="retro-computer">
@@ -99,7 +99,7 @@ export const RetroComputer = (props: IProps) => {
                 </svg>
                 <div className="screen">
                     <div className="typewriter">
-                        <p>{notFoundPage ? "404: Error" : "Hello World!"}</p>
+                        <p>{animationText}</p>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ export const Home = () => {
     return (
         <div className="about-container center">
             <div className="about-content">
-                <RetroComputer />
+                <RetroComputer animationText="Hello World!" />
                 <h1>Jack Lovett</h1>
                 <p className="highlight">
                     Full-stack Developer <span className="divider">|</span> UX
