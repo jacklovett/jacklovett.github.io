@@ -17,7 +17,7 @@ export const Projects = () => {
                         />
                     </Link>
                 </div>
-                <div className="content">
+                <div className="content center">
                     <div className="project-description">
                         <p>
                             {`At `}
@@ -64,7 +64,7 @@ export const Projects = () => {
                             />
                         </Link>
                     </div>
-                    <div className="project-description">
+                    <div className="project-description content">
                         <p>
                             <Link path="https://www.corsair.com/">Corsair</Link>
                             {` specialise in gaming hardware. We partnered with them 
