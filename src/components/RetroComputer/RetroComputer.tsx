@@ -1,4 +1,3 @@
-import React from "react"
 import "./RetroComputer.css"
 
 interface IProps {

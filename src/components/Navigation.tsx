@@ -1,8 +1,8 @@
-import React from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import queryString from "query-string"
 
 import NavigationItem from "./NavigationItem"
+import { useEffect } from "react"
 
 const navigationGroup = [
     { path: "/", name: "About" },
@@ -17,7 +17,7 @@ export const Navigation = (): JSX.Element => {
     const queryParams = queryString.parse(search)
 
     // If the `from404` query parameter is present, navigate to the custom 404 page
-    React.useEffect(() => {
+    useEffect(() => {
         if (queryParams.from404) {
             navigate("/404", { replace: true })
         }

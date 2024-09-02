@@ -24,7 +24,7 @@
 .typewriter p {
     color: green;
     font-family: monospace;
-    font-size: 14px;
+    font-size: var(--font-size-small);
     overflow: hidden;
     border-right: 0.15em solid green;
     white-space: nowrap;
@@ -34,7 +34,7 @@
         blink-caret 1s step-end infinite;
 }
 
-@media (max-height: 750px) {
+@media (max-height: 640px) {
     .retro-computer {
         max-width: 188px;
     }
@@ -47,7 +47,7 @@
     }
 
     .typewriter p {
-        font-size: 12px;
+        font-size: var(--font-size-x-small);
     }
 }
 

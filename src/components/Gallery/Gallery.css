@@ -37,10 +37,10 @@
     color: var(--white);
     background: transparent;
     opacity: 0.8;
-    font-size: 24px;
+    font-size: var(--font-size-large);
     border: none;
-    width: 16px;
-    height: 32px;
+    width: var(--spacing-unit);
+    height: var(--spacing-large);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,40 +59,40 @@
 
 .close-button {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: var(--spacing-unit);
+    right: var(--spacing-unit);
 }
 
 .prev-button {
     position: absolute;
     top: 50%;
-    left: 8px;
+    left: var(--spacing-small);
     transform: translateY(-50%);
 }
 
 .next-button {
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: var(--spacing-small);
     transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
     .gallery-button {
-        font-size: 32px;
+        font-size: var(--font-size-large);
     }
 
     .close-button {
-        top: 32px;
-        right: 32px;
+        top: var(--spacing-large);
+        right: var(--spacing-large);
     }
 
     .next-button {
-        right: 32px;
+        right: var(--spacing-large);
     }
 
     .prev-button {
-        left: 32px;
+        left: var(--spacing-large);
     }
 }
 

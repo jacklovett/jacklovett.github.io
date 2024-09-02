@@ -1,9 +1,8 @@
-import React from "react"
 import { IconLink, RetroComputer } from "../components"
 
 export const Contact = () => (
-    <section className="contact center">
-        <div>
+    <section className="about-container">
+        <div className="about-content">
             <RetroComputer animationText="Get in touch!" />
             <h1>Contacts</h1>
             <div>

@@ -1,4 +1,3 @@
-import React from "react"
 import { Routes, Route, HashRouter as Router } from "react-router-dom"
 
 import { Navigation } from "./components"
@@ -8,27 +7,17 @@ import "./index.css"
 import "./App.css"
 
 const App = () => (
-    <div className="app">
-        <Router>
-            <Navigation />
-            <div className="app-content">
-                <Routes>
-                    <Route key="home" path="/" element={<Home />} />
-                    <Route
-                        key="projects"
-                        path="/projects"
-                        element={<Projects />}
-                    />
-                    <Route
-                        key="contact"
-                        path="/contact"
-                        element={<Contact />}
-                    />
-                    <Route key="404" path="*" element={<PageNotFound />} />
-                </Routes>
-            </div>
-        </Router>
-    </div>
+    <Router>
+        <Navigation />
+        <div className="app-content">
+            <Routes>
+                <Route key="home" path="/" element={<Home />} />
+                <Route key="projects" path="/projects" element={<Projects />} />
+                <Route key="contact" path="/contact" element={<Contact />} />
+                <Route key="404" path="*" element={<PageNotFound />} />
+            </Routes>
+        </div>
+    </Router>
 )
 
 export default App

@@ -1,13 +1,20 @@
-* {
+*,
+*::before,
     box-sizing: border-box;
 }
 
 html,
 body,
-#root {
+#root,
+:root {
     height: 100%;
+    min-height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
+    background: var(--black);
+    font-size: var(--font-size-base);
+    color: var(--white);
 }
 
 @font-face {
@@ -32,11 +39,9 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--white);
-    background: var(--black);
 }
 
-:root #root {
+:root {
     --white: #ffffff;
     --black: #000000;
     --primary-color: #008fd6;
@@ -48,6 +53,17 @@ body {
     --tic-stat-toe-background: #770693;
     --tic-stat-toe-color: #09d3ac;
     --header-height: 48px;
+
+    --font-size-base: 1rem;
+    --font-size-x-small: 0.75rem;
+    --font-size-small: 0.875rem;
+    --font-size-large: 1.25rem;
+    --font-size-x-large: 2rem;
+
+    --spacing-unit: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-large: 2rem;
+    --spacing-x-large: 2.5rem;
 }
 
 ul,
@@ -74,11 +90,11 @@ h2 {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: var(--font-size-x-large);
 }
 
 h2 {
-    font-size: 28px;
+    font-size: calc(var(--font-size-x-large) - var(--font-size-x-small));
 }
 
 .column {

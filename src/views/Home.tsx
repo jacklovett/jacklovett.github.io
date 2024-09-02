@@ -1,10 +1,9 @@
-import React from "react"
 import { Link as ReactLink } from "react-router-dom"
 import { RetroComputer } from "../components"
 
 export const Home = () => {
     return (
-        <div className="about-container center">
+        <div className="about-container">
             <div className="about-content">
                 <RetroComputer animationText="Hello World!" />
                 <h1>Jack Lovett</h1>

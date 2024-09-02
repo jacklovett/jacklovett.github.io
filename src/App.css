@@ -9,22 +9,17 @@
 
 /* Base Styles */
 
-.app {
-    background-color: var(--black);
-    height: 100%;
-    font-size: calc(10px + 2vmin);
-    color: var(--white);
-}
-
 .app-content {
-    text-align: center;
-    height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--header-height);
+    height: 100%;
+    overflow-y: auto;
 }
 
 .highlight {
-    /* font-size: 1.6rem; */
     color: var(--primary-color);
-    margin-top: -16px;
+    margin-top: var(--spacing-small);
 
     .divider {
         color: var(--white);
@@ -32,7 +27,7 @@
 }
 
 .cta {
-    font-size: 1.2rem;
+    font-size: var(--font-size-base);
     color: var(--secondary-color);
 }
 
@@ -44,29 +39,33 @@
 }
 
 .cta a:hover {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 /* About Section */
 
 .about-container {
-    flex-direction: column;
-    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-unit);
 }
 
 .about-content {
-    max-width: 320px;
+    max-width: 430px;
+    text-align: center;
 }
 
 @media (min-width: 430px) {
     .about-content {
-        max-width: 430px;
+        max-width: 480px;
     }
 }
 
 @media (min-width: 789px) {
     .about-content {
-        max-width: 686px;
+        max-width: 720px;
     }
 
     nav.center {
@@ -79,11 +78,16 @@
 nav {
     height: var(--header-height);
     background: var(--surface-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .nav-item {
     height: 100%;
-    margin: 0 16px;
+    margin: 0 var(--spacing-unit);
 }
 
 .nav-item.selected {
@@ -93,7 +97,7 @@ nav {
 /* Icons */
 
 .icons {
-    padding: 8px 16px;
+    padding: var(--spacing-small) var(--spacing-unit);
     color: var(--primary-color);
 }
 
@@ -104,28 +108,26 @@ nav {
 
 /* Contact Section */
 
-.contact {
-    height: 100%;
+.social-networks {
+    font-size: calc(2 * var(--font-size-large));
+    padding: 0 var(--spacing-unit);
 }
 
-.contact .social-networks {
-    font-size: 48px;
-    padding: 0 16px;
+.icons.contacts {
+    font-size: var(--font-size-large);
 }
 
-.contact .icons.contacts {
-    font-size: 28px;
-}
-
-.contact b {
+b {
     color: var(--white);
 }
 
 /* Projects Section */
 
 .projects-view {
-    background-color: var(--white);
     height: 100%;
+    width: 100%;
+    background: var(--white);
+    color: var(--black);
 
     a {
         color: var(--primary-color);
@@ -133,15 +135,21 @@ nav {
     }
 }
 
+.projects-view .onemore,
+.repo {
+    background: var(--white);
+    color: var(--black);
+}
+
 .project-content {
-    padding: 48px 32px;
+    padding: var(--spacing-x-large) var(--spacing-large);
     flex-direction: column;
 }
 
 .content {
     flex-direction: column;
-    padding: 16px;
-    font-size: 16px;
+    padding: var(--spacing-unit);
+    font-size: var(--font-size-base);
     line-height: 20px;
     width: 100%;
 }
@@ -154,7 +162,7 @@ nav {
     max-height: 540px;
     overflow: hidden;
     margin: 0 auto;
-    padding: 16px 0;
+    padding: var(--spacing-unit) 0;
 }
 
 .video-container video {
@@ -191,7 +199,7 @@ nav {
     }
 
     .content {
-        padding: 32px;
+        padding: var(--spacing-large);
     }
 }
 
@@ -221,25 +229,22 @@ nav {
 }
 
 .project-title {
-    font-size: 24px;
+    font-size: var(--font-size-x-large);
     font-weight: bold;
     margin: 0;
 }
 
 .project-description {
-    font-size: 16px;
-    line-height: 20px;
     max-width: 640px;
 }
 
 .project-logo {
-    padding-bottom: 8px;
+    padding-bottom: var(--spacing-small);
 }
 
-.repo {
-    max-width: 340px;
+.repo-content {
+    max-width: 420px;
     margin: auto;
-    padding: 32px 16px;
-    font-size: 16px;
-    color: var(--black);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-large) var(--spacing-unit);
 }
