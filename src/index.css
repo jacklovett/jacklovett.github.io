@@ -56,8 +56,8 @@ body {
     --font-size-base: 1rem;
     --font-size-x-small: 0.75rem;
     --font-size-small: 0.875rem;
-    --font-size-large: 1.25rem;
-    --font-size-x-large: 2rem;
+    --font-size-large: 2rem;
+    --font-size-x-large: 2.5rem;
 
     --spacing-unit: 1rem;
     --spacing-small: 0.5rem;
@@ -93,7 +93,7 @@ h1 {
 }
 
 h2 {
-    font-size: calc(var(--font-size-x-large) - var(--font-size-x-small));
+    font-size: var(--font-size-large);
 }
 
 .column {

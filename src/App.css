@@ -19,7 +19,8 @@
 
 .highlight {
     color: var(--primary-color);
-    margin-top: var(--spacing-small);
+    margin-top: -16px;
+    font-size: calc(var(--font-size-large) - 8px);
 
     .divider {
         color: var(--white);
