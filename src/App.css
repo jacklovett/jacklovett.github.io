@@ -136,7 +136,8 @@ b {
     }
 }
 
-.projects-view .onemore,
+.projects-view .soundid,
+.onemore,
 .repo {
     background: var(--white);
     color: var(--black);
@@ -169,10 +170,6 @@ b {
 .video-container video {
     width: 100%;
     height: auto;
-}
-
-.soundid {
-    color: var(--black);
 }
 
 .corsair,
@@ -246,6 +243,6 @@ b {
 .repo-content {
     max-width: 420px;
     margin: auto;
-    font-size: var(--font-size-base);
+    text-align: center;
     padding: var(--spacing-large) var(--spacing-unit);
 }
