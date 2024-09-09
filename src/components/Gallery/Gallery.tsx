@@ -63,7 +63,12 @@ export const Gallery = (props: IProps): JSX.Element => {
                     }
                 }}
             >
-                <img src={path} alt={name} height={galleryHeight} />
+                <img
+                    src={path}
+                    alt={name}
+                    height={galleryHeight}
+                    loading="lazy"
+                />
             </div>
             {isOpen && (
                 <div className="gallery-overlay">
