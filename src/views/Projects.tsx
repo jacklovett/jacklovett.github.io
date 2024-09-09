@@ -45,7 +45,7 @@ export const Projects = () => (
                     loop
                     autoPlay
                     muted
-                    preload="none"
+                    preload="auto"
                     poster="/img/Corsair/corsair-video-placeholder.png"
                 ></video>
             </div>
