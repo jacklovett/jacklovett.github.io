@@ -1,4 +1,4 @@
-import { Gallery, Link } from "../components"
+import { Gallery, Link, Video } from "../components"
 
 export const Projects = () => (
     <div className="projects-view">
@@ -39,16 +39,10 @@ export const Projects = () => (
             </div>
         </section>
         <section className="corsair center project-content">
-            <div className="video-container">
-                <video
-                    src="/video/corsair-playthrough.mp4"
-                    loop
-                    autoPlay
-                    muted
-                    preload="auto"
-                    poster="/img/Corsair/corsair-video-placeholder.png"
-                ></video>
-            </div>
+            <Video
+                videoPath="/video/corsair-playthrough.mp4"
+                posterPath="/img/Corsair/corsair-video-placeholder.png"
+            />
             <div className="center content">
                 <div className="project-logo">
                     <Link
