@@ -44,7 +44,7 @@ export const Projects = () => (
                 posterPath="/img/Corsair/corsair-video-placeholder.png"
             />
             <div className="center content">
-                <div className="project-logo">
+                <div className="project-logo corsair">
                     <Link
                         path="https://www.corsair.com/"
                         ariaLabel="Visit Corsair"
@@ -69,7 +69,7 @@ export const Projects = () => (
         </section>
         <section className="onemore center project-content">
             <div className="center content">
-                <div className="project-logo">
+                <div className="project-logo onemore">
                     <Link path="https://usa.1more.com/" ariaLabel="Visit 1More">
                         <img
                             src="/img/1More/1more-logo.png"

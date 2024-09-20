@@ -19,7 +19,6 @@
 
 .highlight {
     color: var(--primary-color);
-    margin-top: -16px;
     font-size: calc(var(--font-size-large) - 8px);
 
     .divider {
@@ -109,13 +108,17 @@ nav {
 
 /* Contact Section */
 
+.contact-details {
+    margin-bottom: var(--spacing-unit);
+}
+
 .social-networks {
-    font-size: calc(2 * var(--font-size-large));
-    padding: 0 var(--spacing-unit);
+    font-size: var(--font-size-x-large);
+    padding: 0 var(--spacing-small);
 }
 
 .icons.contacts {
-    font-size: var(--font-size-large);
+    font-size: calc(1.25 * var(--font-size-base));
 }
 
 b {
@@ -232,12 +235,18 @@ b {
     margin: 0;
 }
 
-.project-description {
-    max-width: 640px;
+.project-logo {
+    &.corsair {
+        margin-bottom: -16px;
+    }
+
+    &.onemore {
+        margin-bottom: var(--spacing-unit);
+    }
 }
 
-.project-logo {
-    padding-bottom: var(--spacing-small);
+.project-description {
+    max-width: 640px;
 }
 
 .repo-content {
