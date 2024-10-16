@@ -8,7 +8,9 @@ export const Contact = () => (
             <ul className="contact-details">
                 <li>
                     <i className="fa fa-envelope icons contacts"></i>
-                    jack.l.lovett@gmail.com
+                    <a href="mailto:jack.l.lovett@gmail.com">
+                        jack.l.lovett@gmail.com
+                    </a>
                 </li>
                 <li>
                     <i className="fa fa-phone-square icons contacts"></i>

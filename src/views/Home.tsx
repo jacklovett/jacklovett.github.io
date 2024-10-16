@@ -14,7 +14,7 @@ export const Home = () => {
                 <p>
                     I’m passionate about creating intuitive and engaging digital
                     experiences across all platforms. Let's create user-focused
-                    solutions that make a difference
+                    solutions that really make a difference.
                 </p>
                 <p className="cta">
                     Interested?{" "}
