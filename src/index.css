@@ -54,6 +54,8 @@ body {
     --spacing-small: 0.5rem;
     --spacing-large: 2rem;
     --spacing-x-large: 2.5rem;
+
+    --box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 ul,
@@ -66,19 +68,31 @@ ol {
 a {
     text-decoration: none;
     color: var(--white);
+    display: inline-block;
 }
 a:focus {
     color: var(--white);
 }
 a:hover,
 a:active {
+    text-decoration: underline;
     color: var(--primary-color);
+}
+
+a:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease-in-out;
+}
+
+p {
+    line-height: 1.5;
 }
 
 h1,
 h2 {
     color: var(--primary-color);
     margin: var(--spacing-unit) 0;
+    line-height: 1.2;
 }
 
 h1 {

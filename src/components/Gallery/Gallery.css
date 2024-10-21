@@ -8,6 +8,7 @@
 
 .gallery img {
     width: 100%;
+    box-shadow: var(--box-shadow);
 }
 
 .gallery.opened img {
@@ -30,13 +31,18 @@
 
 .gallery-overlay .gallery-image {
     max-width: 86%;
+    height: calc(100% - 96px);
     transition: transform 0.5s ease;
+}
+
+.gallery-overlay .gallery-image.desktop {
+    height: auto;
 }
 
 .gallery-button {
     color: var(--white);
     background: transparent;
-    opacity: 0.8;
+    opacity: 1;
     font-size: var(--font-size-large);
     border: none;
     width: var(--spacing-unit);
@@ -49,7 +55,7 @@
 }
 
 .gallery-button:hover {
-    opacity: 1;
+    opacity: 0.6;
 }
 
 .gallery-button:disabled {

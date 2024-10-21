@@ -141,18 +141,22 @@ export const Projects = () => (
                         {
                             name: "Samaritans back office application login page",
                             path: "/img/Samaritans/backoffice-login.png",
+                            isDesktopImage: true,
                         },
                         {
                             name: "Samaritans back office application chat page",
                             path: "/img/Samaritans/backoffice-chat.png",
+                            isDesktopImage: true,
                         },
                         {
                             name: "Samaritans back office application save chat log form page",
                             path: "/img/Samaritans/backoffice-chat-log.png",
+                            isDesktopImage: true,
                         },
                         {
                             name: "Samaritans back office application add user page",
                             path: "/img/Samaritans/backoffice-add-user.png",
+                            isDesktopImage: true,
                         },
                     ]}
                 />
@@ -218,14 +222,17 @@ export const Projects = () => (
                         {
                             path: "/img/Tic-Stat-Toe/welcome-desktop.png",
                             name: "Welcome page screenshot on desktop",
+                            isDesktopImage: true,
                         },
                         {
                             path: "/img/Tic-Stat-Toe/game-desktop.png",
                             name: "Tic-Tac-Toe game page screenshot on desktop",
+                            isDesktopImage: true,
                         },
                         {
                             path: "/img/Tic-Stat-Toe/stats-desktop.png",
                             name: "Statistics page screenshot on desktop",
+                            isDesktopImage: true,
                         },
                     ]}
                 />

@@ -33,13 +33,6 @@
 
 .cta a {
     color: var(--primary-color);
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 2px;
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.cta a:hover {
-    opacity: 0.6;
 }
 
 /* About Section */
@@ -90,6 +83,15 @@ nav {
     margin: 0 var(--spacing-unit);
 }
 
+.nav-item a {
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .nav-item.selected {
     border-bottom: solid 4px var(--primary-color);
 }
@@ -104,6 +106,8 @@ nav {
 .icons:hover i,
 .icons:focus i {
     color: var(--white);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Contact Section */
@@ -135,7 +139,6 @@ b {
 
     a {
         color: var(--primary-color);
-        text-decoration: underline;
     }
 }
 
@@ -168,6 +171,7 @@ b {
     overflow: hidden;
     margin: 0 auto;
     padding: var(--spacing-unit) 0;
+    box-shadow: var(--box-shadow);
 }
 
 .video-container video {

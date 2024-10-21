@@ -4,6 +4,7 @@ import "./Gallery.css"
 interface GalleryImage {
     name: string
     path: string
+    isDesktopImage?: boolean
 }
 
 interface IProps {
@@ -18,7 +19,7 @@ export const Gallery = (props: IProps): JSX.Element => {
     const [currentImagePosition, setCurrentImagePosition] = useState<number>(0)
 
     const currentImage = images[currentImagePosition]
-    const { name, path } = currentImage
+    const { name, path, isDesktopImage } = currentImage
 
     const nextImage = () => {
         if (currentImagePosition < images.length - 1) {
@@ -78,7 +79,13 @@ export const Gallery = (props: IProps): JSX.Element => {
                     >
                         &#10005;
                     </button>
-                    <img src={path} alt={name} className="gallery-image" />
+                    <img
+                        src={path}
+                        alt={name}
+                        className={`gallery-image ${
+                            isDesktopImage ? "desktop" : ""
+                        }`}
+                    />
 
                     <button
                         className="gallery-button prev-button"
