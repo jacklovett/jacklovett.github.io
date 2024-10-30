@@ -4,6 +4,11 @@
 
 .gallery {
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.03);
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 .gallery img {
