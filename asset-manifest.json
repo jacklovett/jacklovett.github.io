@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.846b3498.css",
+    "main.css": "/static/css/main.6e1a11e9.css",
     "main.js": "/static/js/main.1d3b1f7a.js",
     "static/media/retro-gaming.ttf": "/static/media/retro-gaming.c1a52a602585b2d6baf8.ttf",
     "index.html": "/index.html",
-    "main.846b3498.css.map": "/static/css/main.846b3498.css.map",
+    "main.6e1a11e9.css.map": "/static/css/main.6e1a11e9.css.map",
     "main.1d3b1f7a.js.map": "/static/js/main.1d3b1f7a.js.map"
   },
   "entrypoints": [
-    "static/css/main.846b3498.css",
+    "static/css/main.6e1a11e9.css",
     "static/js/main.1d3b1f7a.js"
   ]
 }
