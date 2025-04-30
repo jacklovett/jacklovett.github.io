@@ -100,7 +100,14 @@ const RetroBase = ({
     isComputerOn: boolean
     toggleComputer: () => void
 }) => (
-    <group position={[0, 0.1, 0]} onClick={() => toggleComputer()}>
+    <group
+        position={[0, 0.1, 0]}
+        onClick={() => {
+            toggleComputer()
+            // Vibrate for 500 milliseconds
+            navigator.vibrate(500)
+        }}
+    >
         {/* Base Frame */}
         <mesh castShadow>
             <boxGeometry args={[6, 1.75, 4]} />
