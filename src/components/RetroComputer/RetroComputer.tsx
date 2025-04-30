@@ -100,7 +100,7 @@ const RetroBase = ({
     isComputerOn: boolean
     toggleComputer: () => void
 }) => (
-    <group position={[0, 0.1, 0]}>
+    <group position={[0, 0.1, 0]} onClick={() => toggleComputer()}>
         {/* Base Frame */}
         <mesh castShadow>
             <boxGeometry args={[6, 1.75, 4]} />
@@ -115,7 +115,6 @@ const RetroBase = ({
         {/* Button on Base */}
         <group
             position={[0, 0, 2.1]}
-            onClick={() => toggleComputer()}
             onPointerOver={() => (document.body.style.cursor = "pointer")}
             onPointerOut={() => (document.body.style.cursor = "default")}
         >
