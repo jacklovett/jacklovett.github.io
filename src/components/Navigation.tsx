@@ -1,8 +1,9 @@
+import { useEffect } from "react"
+
 import { useNavigate, useLocation } from "react-router-dom"
 import queryString from "query-string"
 
 import NavigationItem from "./NavigationItem"
-import { useEffect } from "react"
 
 const navigationGroup = [
     { path: "/", name: "About" },
@@ -10,7 +11,7 @@ const navigationGroup = [
     { path: "/contact", name: "Contact" },
 ]
 
-export const Navigation = (): JSX.Element => {
+export const Navigation = () => {
     const navigate = useNavigate()
     const { pathname, search } = useLocation()
 

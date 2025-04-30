@@ -18,7 +18,7 @@ body,
 
 @font-face {
     font-family: "Retro Gaming";
-    src: url("/public/fonts/retro-gaming.ttf") format("truetype");
+    src: url("/fonts/retro-gaming.ttf") format("truetype");
     font-display: swap;
 }
 
@@ -37,6 +37,12 @@ body {
     --black: #000000;
     --primary-color: #008fd6;
     --secondary-color: #999999;
+    --computer-color: #00ff00;
+    --computer-off-color: #ff0000; /* Red for off state */
+    --casing-color: #c0c0c0; /* Light gray for retro plastic casing */
+    --edge-color: var(--black);   /* Black for edges */
+    --screen-color: #404040; /* Lighter black for screen on state */
+    --screen-off-color: var(--black); /* Black for screen off state */
     --background-color: var(--black);
     --surface-color: #1a1a1a;
     --samaritans-background: #b1cdbd;

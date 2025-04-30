@@ -1,107 +1,207 @@
+import { useState } from "react"
+import { Canvas } from "@react-three/fiber"
+import { Html, Edges, Text } from "@react-three/drei"
+
 import "./RetroComputer.css"
+
+const styles = getComputedStyle(document.documentElement)
+// Get CSS variables for colors
+const CASING_COLOR = styles.getPropertyValue("--casing-color").trim()
+const EDGE_COLOR = styles.getPropertyValue("--edge-color").trim()
+const SCREEN_COLOR = styles.getPropertyValue("--screen-color").trim()
+const SCREEN_OFF_COLOR = styles.getPropertyValue("--screen-off-color").trim()
+const COMPUTER_COLOR = styles.getPropertyValue("--computer-color").trim()
+const COMPUTER_OFF_COLOR = styles
+    .getPropertyValue("--computer-off-color")
+    .trim()
 
 interface IProps {
     animationText: string
-    color?: string
 }
 
-export const RetroComputer = (props: IProps) => {
-    const { animationText, color = "#ffffff" } = props
+export const RetroComputer = ({ animationText }: IProps) => {
+    const [isComputerOn, setIsComputerOn] = useState(true)
+    const [isLoading, setIsLoading] = useState(true) // Track loading state
+
     return (
         <div className="retro-computer-container">
-            <div className="retro-computer">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    {/* Computer monitor */}
-                    {/* Top-left corner */}
-                    <rect x="3" y="2" width="1.5" height="1.5" fill={color} />
-                    {/* Top + left edge */}
-                    <rect x="4.5" y="1" width="15" height="1.5" fill={color} />
-                    <rect
-                        x="1.5"
-                        y="3.5"
-                        width="1.5"
-                        height="9.5"
-                        fill={color}
-                    />
-                    {/* Top-right corner */}
-                    <rect
-                        x="19.5"
-                        y="2"
-                        width="1.5"
-                        height="1.5"
-                        fill={color}
-                    />
-                    {/* Bottom edge */}
-                    <rect x="4.5" y="14" width="15" height="1.5" fill={color} />
-                    <rect x="6" y="14" width="12" height="2.25" fill={color} />
-                    {/* Right edge */}
-                    <rect
-                        x="21"
-                        y="3.5"
-                        width="1.5"
-                        height="9.5"
-                        fill={color}
-                    />
-                    {/* Bottom-right corner */}
-                    <rect
-                        x="19.5"
-                        y="13"
-                        width="1.5"
-                        height="1.5"
-                        fill={color}
-                    />
-                    {/* Bottom-left corner */}
-                    <rect x="3" y="13" width="1.5" height="1.5" fill={color} />
-                    {/* Keyboard */}
-                    {/* Keyboard border */}
-                    <rect x="1" y="17" width="22" height="1" fill={color} />
-                    <rect x="0" y="18" width="1" height="5" fill={color} />
-                    <rect x="23" y="18" width="1" height="5" fill={color} />
-                    <rect x="1" y="23" width="22" height="1" fill={color} />
-                    {/* First row of keys */}
-                    <rect x="1.5" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="3" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="4.5" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="6" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="7.5" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="9" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="10.5" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="12" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="13.5" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="15" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="16.5" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="18" y="18.5" width="1" height="1" fill={color} />
-                    <rect x="19.5" y="18.5" width="3" height="1" fill={color} />
-                    {/* Second row of keys */}
-                    <rect x="1.5" y="20" width="2" height="1" fill={color} />
-                    <rect x="4" y="20" width="1" height="1" fill={color} />
-                    <rect x="5.5" y="20" width="1" height="1" fill={color} />
-                    <rect x="7" y="20" width="1" height="1" fill={color} />
-                    <rect x="8.5" y="20" width="1" height="1" fill={color} />
-                    <rect x="10" y="20" width="1" height="1" fill={color} />
-                    <rect x="11.5" y="20" width="1" height="1" fill={color} />
-                    <rect x="13" y="20" width="1" height="1" fill={color} />
-                    <rect x="14.5" y="20" width="1" height="1" fill={color} />
-                    <rect x="16" y="20" width="1" height="1" fill={color} />
-                    <rect x="17.5" y="20" width="1" height="1" fill={color} />
-                    <rect x="19" y="20" width="1" height="1" fill={color} />
-                    <rect x="20.5" y="20" width="2" height="1" fill={color} />
-                    {/* Third row of keys */}
-                    <rect x="1.5" y="21.5" width="1" height="1" fill={color} />
-                    <rect x="3" y="21.5" width="1" height="1" fill={color} />
-                    <rect x="4.5" y="21.5" width="1" height="1" fill={color} />
-                    <rect x="6" y="21.5" width="1" height="1" fill={color} />
-                    <rect x="7.5" y="21.5" width="9" height="1" fill={color} />
-                    <rect x="17" y="21.5" width="1" height="1" fill={color} />
-                    <rect x="18.5" y="21.5" width="1" height="1" fill={color} />
-                    <rect x="20" y="21.5" width="2.5" height="1" fill={color} />
-                </svg>
-                <div className="screen">
-                    <div className="typewriter">
-                        <p>{animationText}</p>
-                    </div>
+            {isLoading && (
+                <div className="skeleton-loader">
+                    <div className="skeleton-circle"></div>
                 </div>
-            </div>
+            )}
+            <Canvas
+                camera={{ position: [40, 40, 80], fov: 50 }}
+                onCreated={() => setIsLoading(false)}
+            >
+                {/* Lighting */}
+                <hemisphereLight intensity={0.8} />
+                {/* Retro Computer */}
+                <group rotation={[0, 0.9, 0]} scale={[5, 5, 5]}>
+                    <RetroMonitor
+                        text={animationText}
+                        isComputerOn={isComputerOn}
+                    />
+                    <RetroBase
+                        isComputerOn={isComputerOn}
+                        toggleComputer={() => setIsComputerOn(!isComputerOn)}
+                    />
+                    <RetroKeyboard />
+                </group>
+            </Canvas>
         </div>
     )
 }
+
+const RetroMonitor = ({
+    text,
+    isComputerOn,
+}: {
+    text: string
+    isComputerOn: boolean
+}) => (
+    <group position={[0, 4, 0]}>
+        {/* Monitor Frame */}
+        <mesh castShadow>
+            <boxGeometry args={[11, 6, 4]} />
+            <meshStandardMaterial
+                color={CASING_COLOR}
+                roughness={0.9}
+                metalness={0.4}
+            />
+            <Edges color={EDGE_COLOR} />
+        </mesh>
+
+        {/* Screen */}
+        <mesh position={[0, 0, 2]}>
+            <boxGeometry args={[9.5, 5, 0.1]} />
+            {/* Increased screen size */}
+            <meshStandardMaterial
+                color={isComputerOn ? SCREEN_COLOR : SCREEN_OFF_COLOR}
+            />
+            <Edges color={EDGE_COLOR} />
+        </mesh>
+
+        {/* Text on Screen */}
+        {isComputerOn && (
+            <Html position={[-0.5, 0, 2.1]} center rotation={[0, 0.9, 0]}>
+                <div className="typewriter">
+                    <p>{text}</p>
+                </div>
+            </Html>
+        )}
+    </group>
+)
+
+const RetroBase = ({
+    isComputerOn,
+    toggleComputer,
+}: {
+    isComputerOn: boolean
+    toggleComputer: () => void
+}) => (
+    <group position={[0, 0.1, 0]}>
+        {/* Base Frame */}
+        <mesh castShadow>
+            <boxGeometry args={[6, 1.75, 4]} />
+            <meshStandardMaterial
+                color={CASING_COLOR}
+                roughness={0.9}
+                metalness={0.4}
+            />
+            <Edges color={EDGE_COLOR} />
+        </mesh>
+
+        {/* Button on Base */}
+        <group
+            position={[0, 0, 2.1]}
+            onClick={() => toggleComputer()}
+            onPointerOver={() => (document.body.style.cursor = "pointer")}
+            onPointerOut={() => (document.body.style.cursor = "default")}
+        >
+            {/* Button Body */}
+            <mesh rotation={[Math.PI / 2, 0, 0]} castShadow receiveShadow>
+                <cylinderGeometry args={[0.4, 0.4, 0.2, 32]} />
+                <meshStandardMaterial
+                    color={CASING_COLOR}
+                    roughness={0.5}
+                    metalness={0.8}
+                />
+                <Edges color={EDGE_COLOR} />
+            </mesh>
+            {/* Standby Icon */}
+            <Text
+                position={[0, -0.1, 0.12]} // Adjusted to sit on the button's surface
+                fontSize={0.5}
+                color={isComputerOn ? COMPUTER_COLOR : COMPUTER_OFF_COLOR}
+                anchorX="center"
+                anchorY="middle"
+            >
+                &#x23FB; {/* Unicode for the standby icon */}
+            </Text>
+        </group>
+    </group>
+)
+
+const RetroKeyboard = () => (
+    <group position={[1, -3, 2]}>
+        {/* Keyboard Base */}
+        <mesh castShadow>
+            <boxGeometry args={[7, 0.5, 3]} />
+            <meshStandardMaterial
+                color={CASING_COLOR}
+                roughness={0.8}
+                metalness={0.1}
+            />
+            <Edges color={EDGE_COLOR} />
+        </mesh>
+        {/* Keys */}
+        <group position={[-0.8, 1.2, 1.6]}>
+            {/* First 4 rows of keys */}
+            {Array.from({ length: 4 }).map((_, row) =>
+                Array.from({ length: 14 }).map((_, col) => (
+                    <mesh
+                        key={`${row}-${col}`}
+                        position={[-2.5 + col * 0.4, 0, -1.2 + row * 0.4]}
+                    >
+                        <boxGeometry args={[0.35, 0.1, 0.35]} />
+                        <meshStandardMaterial color={CASING_COLOR} />
+                        <Edges color={EDGE_COLOR} />
+                    </mesh>
+                ))
+            )}
+
+            {/* Bottom Row with Spacebar */}
+            {Array.from({ length: 12 }).map((_, col) => {
+                if (col === 3) {
+                    // Spacebar in the middle of the bottom row
+                    return (
+                        <mesh key="spacebar" position={[-0.3, 0, 0.4]}>
+                            <boxGeometry args={[2.3, 0.1, 0.35]} />
+                            {/* Longer spacebar */}
+                            <meshStandardMaterial color={CASING_COLOR} />
+                            <Edges color={EDGE_COLOR} />
+                        </mesh>
+                    )
+                } else if (col < 3 || col > 6) {
+                    // Normal keys on either side of the spacebar
+                    return (
+                        <mesh
+                            key={`key-${col}`}
+                            position={[
+                                -2.5 + (col < 3 ? col : col + 2) * 0.4,
+                                0,
+                                0.4,
+                            ]}
+                        >
+                            <boxGeometry args={[0.35, 0.1, 0.35]} />
+                            <meshStandardMaterial color={CASING_COLOR} />
+                            <Edges color={EDGE_COLOR} />
+                        </mesh>
+                    )
+                }
+                return null // Skip positions where the spacebar is
+            })}
+        </group>
+    </group>
+)
