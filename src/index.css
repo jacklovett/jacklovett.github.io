@@ -16,12 +16,7 @@ body,
     color: var(--white);
 }
 
-div,
-input,
-textarea,
-button,
-select,
-a {
+* {
     -webkit-tap-highlight-color: transparent;
 }
 
