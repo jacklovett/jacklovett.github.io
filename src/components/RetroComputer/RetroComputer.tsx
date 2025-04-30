@@ -103,9 +103,11 @@ const RetroBase = ({
     <group
         position={[0, 0.1, 0]}
         onClick={() => {
+            if ("vibrate" in navigator) {
+                // Vibrate for 500 milliseconds
+                navigator.vibrate(1000)
+            }
             toggleComputer()
-            // Vibrate for 500 milliseconds
-            navigator.vibrate(500)
         }}
     >
         {/* Base Frame */}
