@@ -16,6 +16,8 @@ export const Video = (props: IProps) => {
                 poster={posterPath}
                 width="640"
                 height="360"
+                playsInline
+                webkit-playsinline
             ></video>
         </div>
     )

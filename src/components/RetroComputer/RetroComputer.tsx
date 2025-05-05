@@ -63,7 +63,7 @@ const RetroMonitor = ({
     <group position={[0, 4, 0]}>
         {/* Monitor Frame */}
         <mesh castShadow>
-            <boxGeometry args={[11, 6, 4]} />
+            <boxGeometry args={[14, 6.5, 4]} />
             <meshStandardMaterial
                 color={CASING_COLOR}
                 roughness={0.9}
@@ -74,7 +74,7 @@ const RetroMonitor = ({
 
         {/* Screen */}
         <mesh position={[0, 0, 2]}>
-            <boxGeometry args={[9.5, 5, 0.1]} />
+            <boxGeometry args={[12, 5.5, 0.1]} />
             {/* Increased screen size */}
             <meshStandardMaterial
                 color={isComputerOn ? SCREEN_COLOR : SCREEN_OFF_COLOR}
@@ -84,7 +84,7 @@ const RetroMonitor = ({
 
         {/* Text on Screen */}
         {isComputerOn && (
-            <Html position={[-0.5, 0, 2.1]} center rotation={[0, 0.9, 0]}>
+            <Html center zIndexRange={[10, 11]}>
                 <div className="typewriter">
                     <p>{text}</p>
                 </div>
@@ -100,10 +100,10 @@ const RetroBase = ({
     isComputerOn: boolean
     toggleComputer: () => void
 }) => (
-    <group position={[0, 0.1, 0]} onClick={() => toggleComputer()}>
+    <group position={[0, -0.22, 0]} onClick={() => toggleComputer()}>
         {/* Base Frame */}
         <mesh castShadow>
-            <boxGeometry args={[6, 1.75, 4]} />
+            <boxGeometry args={[6, 2, 4]} />
             <meshStandardMaterial
                 color={CASING_COLOR}
                 roughness={0.9}
@@ -143,7 +143,7 @@ const RetroBase = ({
 )
 
 const RetroKeyboard = () => (
-    <group position={[1, -3, 2]}>
+    <group position={[1, -4, 2]}>
         {/* Keyboard Base */}
         <mesh castShadow>
             <boxGeometry args={[7, 0.5, 3]} />

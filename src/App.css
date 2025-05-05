@@ -27,8 +27,7 @@
 }
 
 .cta {
-    font-size: var(--font-size-base);
-    color: var(--secondary-color);
+    font-size: var(--font-size-small);
 }
 
 .cta a {
@@ -79,7 +78,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .nav-item {
