@@ -49,6 +49,9 @@ body {
     --screen-off-color: var(--black); /* Black for screen off state */
     --background-color: var(--black);
     --surface-color: #1a1a1a;
+    --harmonikey-background: #f5f0e6;
+    --harmonikey-color: #0f172a;
+    --harmonikey-accent: #dc2626;
     --samaritans-background: #b1cdbd;
     --samaritans-color: #2a4f55;
     --tic-stat-toe-background: #770693;

@@ -122,6 +122,42 @@ export const Projects = () => (
                 />
             </div>
         </section>
+        <section className="harmonikey center project-content">
+            <div className="center content">
+                <img
+                    src="/img/HarmoniKey/harmonikey-interactive-harmonica.png"
+                    alt="Interactive harmonica model showing note layout"
+                    style={{ maxWidth: "100%", height: "auto" }}
+                />
+            </div>
+            <div className="center content">
+                <div className="project-logo harmonikey">
+                    <Link
+                        path="https://harmonikeymusic.com"
+                        ariaLabel="Visit HarmoniKey"
+                    >
+                        <img
+                            src="/img/HarmoniKey/harmonikey-logo.png"
+                            alt="HarmoniKey"
+                            height="64"
+                        />
+                    </Link>
+                </div>
+                <div className="project-description">
+                    <p>
+                        Interactive harmonica model where you click holes to see
+                        notes. Supports diatonic and chromatic harmonicas in
+                        multiple keys with technique tutorials and care guides.
+                    </p>
+                    <p>
+                        {`Check it out at `}
+                        <Link path="https://harmonikeymusic.com">
+                            harmonikeymusic.com
+                        </Link>
+                    </p>
+                </div>
+            </div>
+        </section>
         <section className="samaritans center project-content">
             <div className="center content">
                 <Gallery
